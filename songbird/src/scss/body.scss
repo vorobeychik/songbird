@@ -1,0 +1,266 @@
+
+.container{
+  background-color: #303030;
+  border: 1px solid #444;
+  width: 50%;
+  border-radius: 3px;
+}
+.body--main__content{
+  display: flex;
+
+  .body--main__bird--info{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #303030;
+    border-radius: 3px;
+
+    .info--bird__content{
+      width: 100%;
+    }
+    .body--main__text{
+    }
+    .info--bird__container{
+      display: flex;
+
+
+      .info--bird__name--container{
+        border-bottom: 1px solid #555;
+
+
+        .info--bird__name{
+          font-weight: 500;
+          font-size: 1.5rem;
+          padding: .25rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .info--bird__latin--name--container{
+        border-bottom: 1px solid #555;
+        padding: .25rem;
+      }
+
+      .info--bird__image{
+        width: 200px;
+        height: 155px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 2rem;
+      }
+    }
+    .info--bird__description{
+      margin-top: 10px ;
+    }
+  }
+  .body--main__game--area{
+    padding-right:  15px;
+    width: 50%;
+
+    .area--game__container{
+      background-color: #303030;
+      display: flex;
+      align-items: center;
+      padding: .85rem 1.25rem;
+      border: 1px solid #555;
+
+      .area--game__circle{
+        width: 10px;
+        height: 10px;
+        margin-right: 15px;
+        border-radius: 50%;
+        -webkit-transition: .1s;
+        transition: .1s;
+        background-color: #444;
+      }
+      .area--game__circle__error{
+        background-color: #d62c1a;
+      }
+      .area--game__circle__success{
+        background-color: #00bc8c;
+      }
+    }
+    .area--game__container:first-child{
+      border-radius: 3px 3px 0 0 ;
+    }
+    .area--game__container:last-child{
+      border-radius:  0 0 3px 3px;
+    }
+    .area--game__container:hover{
+      filter:brightness(1.5);
+    }
+  }
+}
+
+rhap_main{
+  width: 100%;
+}
+.rhap_container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-family: inherit;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #303030 ;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  .rhap_time {
+    color: white;
+
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+.body--main__main--player{
+  background-color: #303030;
+  border-radius: 3px;
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+  .player--main__content{
+    width: 100%;
+    padding: 1rem;
+
+    .player--main__container{
+      border-bottom: 1px solid #444;
+
+      .player--main__text{
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .player--main__img{
+    width: 200px;
+    height: 155px;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+
+}
+.main__body{
+  padding: 15px 0;
+}
+
+.next--round__button{
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin: 25px 0 0 0;
+  background-color: #303030;
+  border: 1px solid #444;
+  color: #fff!important;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.next--round__button__active{
+  background-color: #00bc8c;
+}
+
+.main__end--screen{
+  background-color: #303030;
+  border-radius: 3px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+
+  .screen-end__title{
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+
+  }
+
+  .screen-end__text{
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align:center;
+  }
+
+  .screen-end__button{
+    width: 100%;
+    padding: 15px;
+    margin: 25px 0;
+    background-color: #00bc8c;
+    border: 1px solid #444;
+  }
+
+  .screen-end__button:hover{
+    filter: brightness(1.2);
+  }
+}
+
+@media (max-width: 1001px) {
+  .body--main__content{
+    flex-direction: column;
+  }
+  .container{
+    margin-top: 40px;
+    width: 100%!important;
+  }
+  .info--bird__content--container{
+    padding-right: 30px;
+  }
+  .body--main__game--area{
+    width: auto!important;
+    padding-right:  0!important;
+  }
+}
+@media (max-width: 610px){
+  .info--bird__container{
+    flex-direction: column;
+  }
+  .info--bird__name{
+    text-align: center;
+  }
+  .info--bird__latin--name{
+    text-align: center;
+  }
+  .info--bird__image{
+    align-self: center;
+    margin-right: 0!important;
+  }
+  .body--main__main--player{
+    flex-direction: column;
+
+  }
+  .player--main__text{
+    text-align: center;
+  }
+  .player--main__img{
+    align-self: center;
+  }
+  .rhap_container{
+    margin: 0 auto;
+  }
+  .player--main__content{
+    padding: .5rem 0 0 0!important;
+  }
+  .player--main__container{
+    text-align: center;
+  }
+  .main__end--screen{
+    padding: 2rem 1rem;
+  }
+  .screen-end__title{
+    font-size: 2.5rem!important;
+  }
+
+}
+
+@media (max-width: 360px) {
+  .screen-end__title{
+    font-size: 2rem!important;
+  }
+}
