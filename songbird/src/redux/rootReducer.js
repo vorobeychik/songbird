@@ -1,6 +1,5 @@
 import birdsData from "../data/birdsData";
 import {CHANGE_ROUND, SELECT_BIRD, END__GAME, NEW__GAME} from "./types";
-import {combineReducers, compose} from "redux";
 
 const initialState = {
     birdsData: birdsData[0],
@@ -20,11 +19,13 @@ const initialState = {
 export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_ROUND:
+            let rightBird =  birdsData[state.round + 1][ randomInteger(0,5) ]
+            console.log(rightBird.name)
             return {...state,
                     round: state.round + 1,
                     birdsData: birdsData[state.round + 1],
                     selectedBird: {},
-                    rightBird: birdsData[state.round + 1][ randomInteger(0,5) ],
+                    rightBird: rightBird,
                     roundComplete: false,
                     addingScore:5,
                     clicked:[],
@@ -64,7 +65,16 @@ export const rootReducer = (state = initialState, action) => {
             };
         case NEW__GAME:
             return {
-                ...initialState
+                birdsData: birdsData[0],
+                rightBird: birdsData[0][ randomInteger(0,5) ],
+                selectedBird: {},
+                round:0,
+                roundComplete: false,
+                score:0,
+                addingScore:5,
+                clicked:[],
+                buttonStyles: new Array(6).fill('area--game__circle'),
+                gameEnd:false,
             }
         default:
             return state;

@@ -9,7 +9,7 @@ export default function Player(props){
             autoPlay = {false}
             autoPlayAfterSrcChange={false}
             src={props.audio}
-            onPlay={e => console.log("onPlay")}
+            onPlay={ e => e}
             // other props here
         />
     );
