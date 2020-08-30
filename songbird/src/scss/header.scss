@@ -1,0 +1,50 @@
+
+.header--main__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+
+
+  .header--main__span{
+    color: #00bc8c;
+  }
+
+  .header--main__logo{
+    font-family: 'Lemonada', cursive;
+  }
+  .header--main__score{
+    color: #f4f4f4;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+
+}
+
+.header--main__menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .header--main__menu--item:first-child{
+    border-radius: 0.25rem  0 0 0.25rem;
+  }
+
+  .header--main__menu--item:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
+  .header--main__menu--item{
+    flex: auto;
+    text-align: center;
+    background-color: #008966;;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .header--main__menu--item__active{
+    background-color: #00bc8c;
+  }
+
+
+}
+
